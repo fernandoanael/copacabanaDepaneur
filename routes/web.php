@@ -1,5 +1,6 @@
 <?php
 
+use App\Product as Product;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,5 +13,6 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $product = Product::first();
+    return $product->Orders;
 });
