@@ -13,14 +13,14 @@ class ProductsTableSeeder extends Seeder
     {
         DB::table('products')->insert([
             [
-                'name'  =>  'Rice 1kg',
-                'price' =>  3.5,
+                'name'  =>  'Coke 1L',
+                'price' =>  2,
             ],[
-                'name'  =>  'Lettuce 1lb',
+                'name'  =>  'Orange Juice 2L',
                 'price' =>  4
             ],[
-                'name'  =>  'Budweiser 6cans',
-                'price' =>  8.9
+                'name'  =>  'Monster Energy Drink',
+                'price' =>  4.5
             ]
         ]);
     }

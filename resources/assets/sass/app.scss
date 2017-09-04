@@ -5,5 +5,241 @@
 // Variables
 @import "variables";
 
+// Mixins
+@import "mixins";
+
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~bootstrap-4.0.0-beta/dist/css/bootstrap.css";
+
+/*General*/
+
+body{
+    background-color: $body-bg;
+}
+
+._f-container{
+    @include floating-white-container;
+}
+
+._f-container-hover{
+    @include transition(all .2s ease-in-out);
+    &:hover{
+        box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.1);
+    }
+}
+
+._f-flex-center{
+    @include centered-flex;
+}
+
+._f-flex-spaced{
+    @include spaced-flex;
+}
+
+._f-flex-around{
+    @include around-flex;
+}
+
+._f-edit-btn{
+    padding: 3px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    color: #000000;
+    font-weight: 500;
+
+    @include transition(all .2s ease-in-out);
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
+
+._f-ghost-input{
+    @include ghost-input;
+}
+
+._f-list-header{
+    & > th{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+._f-search-input{
+    border-radius:5px 5px 0px 0px;
+    border: none;
+}
+
+/*NAV*/
+nav{
+    margin-bottom: 50px;
+}
+
+._f-bg-light{
+    background-color: #ffffff;
+    border-bottom:1px solid rgba(0,0,0,0.3);
+}
+
+._f-btn-new-order{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+    margin-right: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    &:hover{
+        box-shadow: 0px 7px 20px -5px rgba(0, 0, 0, 0.6);
+    }
+}
+
+/* PRODUCTS.INDEX */
+
+._f-new-btn{
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.3);
+    color: black;
+    font-weight: 500;
+    background: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 30px;
+
+    @include transition(all .2s ease-in-out);
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
+
+/* PRODUCTS.SINGLE */
+._f-name-input{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    @include ghost-input;
+}
+
+._f-single-product-container{
+    @include floating-white-container;
+    padding: 10px 15px 20px 15px;
+}
+
+._f-products-info{
+    text-align: center;
+}
+
+._f-products-input{
+    max-width: 50px;
+}
+
+._f-products-btn-save{
+    cursor: pointer;
+}
+
+._f-products-name-error{
+    border: 1px solid #C62929;
+}
+
+._f-products-delete-btn{
+    color:#000000;
+    font-weight: 300;
+    text-align: center;
+    @include transition(all .15s ease-in-out);
+    &:hover{
+        color: #F70909;
+        text-decoration: none;
+    }
+}
+
+/*NEW ORDER*/
+
+._f-products-table-scroll{
+    @include table-scroll(600px);
+}
+
+._f-buy-td{
+    & > span{
+        font-size:20px;
+        font-weight: 800;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+._f-danger{
+    color: $brand-danger;
+}
+
+.f_success{
+    color: $brand-success;
+}
+
+._f-sm-select{
+    width: auto;
+    border:none;
+    max-width: 90%;
+}
+
+._f-ordernew-padding{
+    @include padding-t-b(15px,10px);
+}
+
+._f-total-container{
+    width: 75%;
+}
+
+._f-total-line{
+    max-width: 60%;
+    border-top: 1px solid rgba(0,0,0,0.8);
+}
+
+._f-orderselected-table-scroll{
+    @include table-scroll(400px);
+}
+
+._f-save-order-btn{
+    cursor: pointer;
+}
+
+/* ORDERS INDEX */
+
+._f-orderindex-padding{
+    @include padding-t-b(15px,10px);
+}
+
+._f-flex-align-start{
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+._f-orderindex-margin{
+    @include margin-t-l(30px, 0px);
+}
+
+/* INDEX */
+//Products Review
+
+._f-productspreview-padding{
+    @include padding-t-b(15px,10px);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+._f-productspreview-header-margin{
+    margin-bottom: 20px;
+}
+
+//sels report
+
+._f-border-left{
+    border-left: 1px solid rgba(0,0,0,0.3);
+}
+
+._f-float-right{
+    float: right;
+}

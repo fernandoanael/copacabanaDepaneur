@@ -13,14 +13,14 @@ class StockTableSeeder extends Seeder
     {
         DB::table('stocks')->insert([
             [
-                'quantity'  =>  20,
-                'product_id'=>  1
-            ],[
                 'quantity'  =>  10,
-                'product_id'=>  2,
+                'product_id'=>  4
             ],[
                 'quantity'  =>  5,
-                'product_id'=>  3
+                'product_id'=>  5,
+            ],[
+                'quantity'  =>  10,
+                'product_id'=>  6
             ]
 
         ]);
