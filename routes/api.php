@@ -25,6 +25,21 @@ Route::get('/products', function(){
 Route::get('/employees', function(){
     return Employee::all();
 });
+Route::get('/employeesPreview', function(){
+    $employees = Employee::take(4)->get();
+
+    $response = [];
+    for($i = 0; $i < count($employees); $i++){
+        $response[$i] = [
+            'id'        =>  $employees[$i]->id,
+            'name'      =>  $employees[$i]->name,
+            'position'  =>  $employees[$i]->position,
+            'salary'    =>  $employees[$i]->salary
+        ];
+    }
+    return $response;
+});
+
 Route::post('/saveOrder', function(Request $request){
     /*
      * 1-Register Order
@@ -109,4 +124,18 @@ Route::get('/sellsReport', function(){
     ];
 
      return $response;
+});
+
+Route::get('/latestsOrders', function(){
+    $response = [];
+    $orders = Order::take(4)->get();
+
+    for($i=0; $i < count($orders); $i++){
+        $response[$i] = [
+            'date'      =>  date('F d, Y', strtotime($orders[$i]->created_at)),
+            'units'     =>  count($orders[$i]->products),
+            'totalPrice'=>  $orders[$i]->totalPrice
+        ];
+    }
+    return $response;
 });

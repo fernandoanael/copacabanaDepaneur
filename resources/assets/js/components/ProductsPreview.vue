@@ -5,7 +5,7 @@
               <h3>Products Review</h3>
           </div>
           <div class="col-3">
-              <a href="http://localhost:3000/products" class="btn btn-outline-dark">
+              <a href="http://localhost:3000/products" class="btn btn-outline-dark _f-bold">
                 View All
               </a>
           </div>   

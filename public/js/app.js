@@ -40499,7 +40499,7 @@ if(false) {
 /* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(95)(undefined);
+exports = module.exports = __webpack_require__(96)(undefined);
 // imports
 
 
@@ -40619,7 +40619,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('h3', [_vm._v("Products Review")])]), _vm._v(" "), _c('div', {
     staticClass: "col-3"
   }, [_c('a', {
-    staticClass: "btn btn-outline-dark",
+    staticClass: "btn btn-outline-dark _f-bold",
     attrs: {
       "href": "http://localhost:3000/products"
     }
@@ -40707,7 +40707,7 @@ if(false) {
 /* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(95)(undefined);
+exports = module.exports = __webpack_require__(96)(undefined);
 // imports
 
 
@@ -40886,12 +40886,12 @@ if(false) {
 /* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(95)(undefined);
+exports = module.exports = __webpack_require__(96)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -40906,16 +40906,74 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            orders: []
+        };
+    },
+    created: function created() {
+        var _this = this;
+
+        axios.get('http://localhost:3000/api/latestsOrders').then(function (response) {
+            _this.orders = response.data;
+        }).catch(function (e) {
+            console.error(e);
+        });
+    }
+});
 
 /***/ }),
 /* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c("div")
-},staticRenderFns: []}
+  return _c('div', {
+    staticClass: "_f-container _f-productspreview-padding"
+  }, [_vm._m(0), _vm._v(" "), _c('table', {
+    staticClass: "table table-hover"
+  }, [_c('tbody', _vm._l((_vm.orders), function(order) {
+    return _c('tr', [_c('td', [_vm._v(_vm._s(order.date))]), _vm._v(" "), _c('td', [_vm._v("x" + _vm._s(order.units))]), _vm._v(" "), _c('td', [_vm._v("$" + _vm._s(order.totalPrice))])])
+  }))])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('h3', {
+    staticClass: "_f-productspreview-header-margin"
+  }, [_vm._v("\n      Latests Orders  \n      "), _c('span', {
+    staticClass: "_f-float-right "
+  }, [_c('a', {
+    staticClass: "btn btn-outline-dark _f-bold",
+    attrs: {
+      "href": "http://localhost:3000/orders"
+    }
+  }, [_vm._v("\n          View All\n      ")]), _vm._v(" "), _c('a', {
+    staticClass: "btn btn-outline-dark _f-bold",
+    attrs: {
+      "href": "http://localhost:3000/orders/create/new"
+    }
+  }, [_vm._v("\n          New\n      ")])])])
+}]}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
@@ -40998,12 +41056,12 @@ if(false) {
 /* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(95)(undefined);
+exports = module.exports = __webpack_require__(96)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -41018,16 +41076,73 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      employees: []
+    };
+  },
+  created: function created() {
+    var _this = this;
+
+    axios.get('http://localhost:3000/api/employeesPreview').then(function (response) {
+      _this.employees = response.data;
+    }).catch(function (e) {
+      console.error(e);
+    });
+  }
+});
 
 /***/ }),
 /* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c("div")
-},staticRenderFns: []}
+  return _c('div', {
+    staticClass: "_f-container _f-productspreview-padding"
+  }, [_vm._m(0), _vm._v(" "), _c('table', {
+    staticClass: "table table-hover"
+  }, [_c('tbody', _vm._l((_vm.employees), function(employee) {
+    return _c('tr', [_c('td', [_vm._v(_vm._s(employee.name))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(employee.position))]), _vm._v(" "), _c('td', [_vm._v("$" + _vm._s(employee.salary) + "/hr")]), _vm._v(" "), _c('td', [_c('a', {
+      staticClass: "_f-edit-btn",
+      attrs: {
+        "href": '/employees/' + employee.id
+      }
+    }, [_vm._v("Edit")])])])
+  }))])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('h3', {
+    staticClass: "_f-productspreview-header-margin"
+  }, [_vm._v("\n      Employees  \n      "), _c('span', {
+    staticClass: "_f-float-right "
+  }, [_c('a', {
+    staticClass: "btn btn-outline-dark _f-bold",
+    attrs: {
+      "href": "http://localhost:3000/employees"
+    }
+  }, [_vm._v("\n          View All\n      ")])])])
+}]}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
@@ -41208,7 +41323,7 @@ if(false) {
 /* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(95)(undefined);
+exports = module.exports = __webpack_require__(96)(undefined);
 // imports
 
 
@@ -41448,7 +41563,7 @@ if(false) {
 /* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(95)(undefined);
+exports = module.exports = __webpack_require__(96)(undefined);
 // imports
 
 
@@ -41696,7 +41811,7 @@ if(false) {
 /* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(95)(undefined);
+exports = module.exports = __webpack_require__(96)(undefined);
 // imports
 
 
@@ -41967,7 +42082,7 @@ if(false) {
 /* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(95)(undefined);
+exports = module.exports = __webpack_require__(96)(undefined);
 // imports
 
 
@@ -42240,7 +42355,8 @@ if (false) {
 /* 92 */,
 /* 93 */,
 /* 94 */,
-/* 95 */
+/* 95 */,
+/* 96 */
 /***/ (function(module, exports) {
 
 /*

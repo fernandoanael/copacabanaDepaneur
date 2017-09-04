@@ -8657,6 +8657,10 @@ body {
   border: none;
 }
 
+._f-bold {
+  font-weight: 500;
+}
+
 /*NAV*/
 
 nav {
