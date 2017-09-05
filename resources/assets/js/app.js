@@ -12,6 +12,10 @@ import Vue2Filters from 'vue2-filters';
 /* Use the Vue1 Filters */
 Vue.use(Vue2Filters);
 
+/* SweetAlert */
+import VueSweetalert2 from 'vue-sweetalert2';
+
+Vue.use(VueSweetalert2);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

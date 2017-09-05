@@ -61,8 +61,11 @@ export default {
                .then(function(response){
                    console.log(response);
                    if(response.data == 'saved'){
-                       alert('Order Saved');
-                       location.reload();
+                       Vue.swal('Order Saved', 'Your order was saved with success', 'success')
+                          .then(()=>{
+                              location.reload();
+                        });
+                       
                    }
                })
                .catch(function(e){

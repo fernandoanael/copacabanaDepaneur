@@ -21,6 +21,8 @@
     "vue": "^2.1.10"
   },
   "dependencies": {
+    "sweetalert2": "^6.6.10",
+    "vue-sweetalert2": "^1.0.7",
     "vue2-filters": "^0.2.1"
   }
 }
