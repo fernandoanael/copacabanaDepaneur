@@ -7,7 +7,7 @@
                 <option v-for="employee in employees" :value="employee.id">{{employee.name}}</option>
             </select>
         </div>
-        <h5 class="text-center">Selected Products</h5>
+        <h5 class="text-center">Order details</h5>
         <table class="table table-sm table-hover _f-orderselected-table-scroll">
             <tbody>
                 <tr v-for="product in selectedProducts">
@@ -33,7 +33,7 @@
                     v-on:click="saveOrder"
                     class="btn btn-outline-info _f-save-order-btn"
             >
-                        Save Order
+                        Confirm Order
             </button>
         </div>
     </div>
@@ -61,7 +61,7 @@ export default {
                .then(function(response){
                    console.log(response);
                    if(response.data == 'saved'){
-                       Vue.swal('Order Saved', 'Your order was saved with success', 'success')
+                       Vue.swal('Order Saved', 'Your order was successfully received', 'success')
                           .then(()=>{
                               location.reload();
                         });

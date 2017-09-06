@@ -43092,13 +43092,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "_f-container _f-productspreview-padding"
-  }, [_c('h3', [_vm._v("Sells Report")]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
+  }, [_c('h3', [_vm._v("Sales Report")]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('div', {
     staticClass: "col-6"
-  }, [_c('p', [_vm._v("\n                Units Sold: "), _c('span', {
+  }, [_c('p', [_vm._v("\n                Qty Sold: "), _c('span', {
     staticClass: "_f-float-right"
-  }, [_vm._v(" " + _vm._s(_vm.unitsSold) + " ")])]), _vm._v(" "), _c('p', [_vm._v("\n                Units in Stock: "), _c('span', {
+  }, [_vm._v(" " + _vm._s(_vm.unitsSold) + " ")])]), _vm._v(" "), _c('p', [_vm._v("\n                Qty in Stock: "), _c('span', {
     staticClass: "_f-float-right"
   }, [_vm._v(" " + _vm._s(_vm.unistsInStock) + " ")])])]), _vm._v(" "), _c('div', {
     staticClass: "col-6 _f-border-left"
@@ -43268,7 +43268,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('h3', {
     staticClass: "_f-productspreview-header-margin"
-  }, [_vm._v("\n      Latests Orders  \n      "), _c('span', {
+  }, [_vm._v("\n      Latest Orders  \n      "), _c('span', {
     staticClass: "_f-float-right "
   }, [_c('a', {
     staticClass: "btn btn-outline-dark _f-bold",
@@ -44469,7 +44469,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             axios.post('http://localhost:3000/api/saveOrder', this.orderPackage).then(function (response) {
                 console.log(response);
                 if (response.data == 'saved') {
-                    Vue.swal('Order Saved', 'Your order was saved with success', 'success').then(function () {
+                    Vue.swal('Order Saved', 'Your order was successfully received', 'success').then(function () {
                         location.reload();
                     });
                 }
@@ -44616,7 +44616,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, [_vm._v(_vm._s(employee.name))])
   })], 2)]), _vm._v(" "), _c('h5', {
     staticClass: "text-center"
-  }, [_vm._v("Selected Products")]), _vm._v(" "), _c('table', {
+  }, [_vm._v("Order details")]), _vm._v(" "), _c('table', {
     staticClass: "table table-sm table-hover _f-orderselected-table-scroll"
   }, [_c('tbody', _vm._l((_vm.selectedProducts), function(product) {
     return _c('tr', [_c('td', [_vm._v(_vm._s(product.name))]), _vm._v(" "), _c('td', [_vm._v("x" + _vm._s(product.quantity))]), _vm._v(" "), _c('td', [_vm._v("$" + _vm._s(product.prePrice))])])
@@ -44637,7 +44637,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     on: {
       "click": _vm.saveOrder
     }
-  }, [_vm._v("\n                    Save Order\n        ")]) : _vm._e()])])
+  }, [_vm._v("\n                    Confirm Order\n        ")]) : _vm._e()])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -44651,7 +44651,7 @@ if (false) {
 /* 90 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: ENOENT: no such file or directory, open 'C:\\xampp\\htdocs\\laravel\\db_project\\node_modules\\bootstrap-4.0.0-beta\\dist\\css\\bootstrap.css'\n    at runLoaders (C:\\xampp\\htdocs\\laravel\\db_project\\node_modules\\webpack\\lib\\NormalModule.js:194:19)\n    at C:\\xampp\\htdocs\\laravel\\db_project\\node_modules\\loader-runner\\lib\\LoaderRunner.js:364:11\n    at C:\\xampp\\htdocs\\laravel\\db_project\\node_modules\\loader-runner\\lib\\LoaderRunner.js:200:19\n    at C:\\xampp\\htdocs\\laravel\\db_project\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:70:14\n    at _combinedTickCallback (internal/process/next_tick.js:95:7)\n    at process._tickCallback (internal/process/next_tick.js:161:9)");
 
 /***/ })
 /******/ ]);

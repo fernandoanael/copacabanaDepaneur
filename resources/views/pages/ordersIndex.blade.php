@@ -13,7 +13,7 @@
                 Order #{{$order->id}}
             </h2>
             <p>
-                Seller: {{$order->employee->name}}
+                Sold by: {{$order->employee->name}}
                     <br>
                 Date: {{date('F d, Y', strtotime($order->created_at))}}
             </p>

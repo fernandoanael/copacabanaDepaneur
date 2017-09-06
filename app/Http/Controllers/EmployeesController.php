@@ -54,7 +54,7 @@ class EmployeesController extends Controller
 
         $employee->save();
         
-        Session::flash('success', $employee->name .' now works for you!');
+        Session::flash('success', 'Now, '.$employee->name .' works for you!');
         return redirect()->route('employees.index');
     }
 
@@ -124,7 +124,7 @@ class EmployeesController extends Controller
         $name = $employee->name;
 
         if($employee->delete()){
-            Session::flash('success', $name . ' was fired and will now starve to death!');
+            Session::flash('success', $name . ' was fired and will starve to death!');
             return redirect()->route('employees.index');
         }else{
             Session::flash('error', 'Something went Wrong, check tinker');

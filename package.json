@@ -18,7 +18,8 @@
     "jquery": "^3.1.1",
     "laravel-mix": "^1.0",
     "lodash": "^4.17.4",
-    "vue": "^2.1.10"
+    "vue": "^2.1.10",
+    "bootstrap": "4.0.0-beta"
   },
   "dependencies": {
     "sweetalert2": "^6.6.10",

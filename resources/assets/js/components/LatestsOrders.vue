@@ -1,7 +1,7 @@
 <template>
   <div class="_f-container _f-productspreview-padding">
     <h3 class="_f-productspreview-header-margin">
-        Latests Orders  
+        Latest Orders  
         <span class="_f-float-right ">      
         <a href="http://localhost:3000/orders" class="btn btn-outline-dark _f-bold">
             View All

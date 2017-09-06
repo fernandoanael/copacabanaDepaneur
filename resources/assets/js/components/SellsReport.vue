@@ -1,14 +1,14 @@
 <template>
   <div class="_f-container _f-productspreview-padding">
-      <h3>Sells Report</h3>
+      <h3>Sales Report</h3>
       <hr>
       <div class="row">
           <div class="col-6">
               <p>
-                  Units Sold: <span class="_f-float-right"> {{unitsSold}} </span>
+                  Qty Sold: <span class="_f-float-right"> {{unitsSold}} </span>
               </p>
               <p>
-                  Units in Stock: <span class="_f-float-right"> {{unistsInStock}} </span>
+                  Qty in Stock: <span class="_f-float-right"> {{unistsInStock}} </span>
               </p>
           </div>
           <div class="col-6 _f-border-left">

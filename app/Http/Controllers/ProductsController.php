@@ -62,7 +62,7 @@ class ProductsController extends Controller
 
         $stock->save();
 
-        Session::flash('success', $product->name .' registered!');
+        Session::flash('success', $product->name .' was successfully registered!');
         return redirect()->route('products.index');
     }
 
@@ -123,7 +123,7 @@ class ProductsController extends Controller
         $stock = $product->stock();
 
         if($product->delete() && $stock->delete()){
-            Session::flash('success', $name . ' and the related stock was deleted');
+            Session::flash('success', $name . ' and the related stock were deleted');
             return redirect()->route('products.index');
         }else{
             Session::flash('error', 'Something went Wrong, check tinker');
